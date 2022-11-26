@@ -28,7 +28,7 @@ class ShoppingRepository {
 
         if (cartItems.length > 0) {
           //process Order
-          cartItems.map(item => {
+          cartItems.map((item) => {
             amount += parseInt(item.product.price) * parseInt(item.unit);
           });
 
