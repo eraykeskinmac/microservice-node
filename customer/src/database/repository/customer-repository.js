@@ -84,7 +84,7 @@ class CustomerRepository {
 
         if (wishlist.length > 0) {
           let isExist = false;
-          wishlist.map(item => {
+          wishlist.map((item) => {
             if (item._id.toString() === product._id.toString()) {
               const index = wishlist.indexOf(item);
               wishlist.splice(index, 1);
@@ -124,7 +124,7 @@ class CustomerRepository {
 
         if (cartItems.length > 0) {
           let isExist = false;
-          cartItems.map(item => {
+          cartItems.map((item) => {
             if (item.product._id.toString() === product._id.toString()) {
               if (isRemove) {
                 cartItems.splice(cartItems.indexOf(item), 1);
