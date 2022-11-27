@@ -52,7 +52,7 @@ class ProductRepository {
     try {
       const products = await ProductModel.find()
         .where('_id')
-        .in(selectedIds.map(_id => _id))
+        .in(selectedIds.map((_id) => _id))
         .exec();
       return products;
     } catch (err) {

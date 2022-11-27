@@ -16,10 +16,10 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
   return (await this.GeneratePassword(enteredPassword, salt)) === savedPassword;
 };
 
-(module.exports.GenerateSignature = async payload => {
+(module.exports.GenerateSignature = async (payload) => {
   return await jwt.sign(payload, APP_SECRET, { expiresIn: '1d' });
 }),
-  (module.exports.ValidateSignature = async req => {
+  (module.exports.ValidateSignature = async (req) => {
     const signature = req.get('Authorization');
 
     console.log(signature);
@@ -34,7 +34,7 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
   });
 
 // Add docs
-module.exports.FormateData = data => {
+module.exports.FormateData = (data) => {
   if (data) {
     return { data };
   } else {
@@ -42,14 +42,14 @@ module.exports.FormateData = data => {
   }
 };
 
-module.exports.PublishCustomerEvent = async payload => {
+module.exports.PublishCustomerEvent = async (payload) => {
   // perform some operations
   axios.post('http://localhost:8000/customer/app-events', {
     payload,
   });
 };
 
-module.exports.PublishShoppingEvent = async payload => {
+module.exports.PublishShoppingEvent = async (payload) => {
   // perform some operations
   axios.post('http://localhost:8000/shopping/app-events', {
     payload,
