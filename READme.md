@@ -1,6 +1,6 @@
 # NodeJS Microservice
 
-I'm building a shopping app using Microservices architecture
+I'm building NodeJS Monolithic to Microservice
 
 # License
 
