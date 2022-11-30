@@ -15,10 +15,10 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
   return (await this.GeneratePassword(enteredPassword, salt)) === savedPassword;
 };
 
-(module.exports.GenerateSignature = async payload => {
+(module.exports.GenerateSignature = async (payload) => {
   return await jwt.sign(payload, APP_SECRET, { expiresIn: '1d' });
 }),
-  (module.exports.ValidateSignature = async req => {
+  (module.exports.ValidateSignature = async (req) => {
     const signature = req.get('Authorization');
 
     console.log(signature);
@@ -32,7 +32,7 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
     return false;
   });
 
-module.exports.FormateData = data => {
+module.exports.FormateData = (data) => {
   if (data) {
     return { data };
   } else {
