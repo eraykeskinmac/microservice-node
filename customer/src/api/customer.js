@@ -1,7 +1,7 @@
 const CustomerService = require('../services/customer-service');
 const UserAuth = require('./middlewares/auth');
 
-module.exports = app => {
+module.exports = (app) => {
   const service = new CustomerService();
 
   app.post('/signup', async (req, res, next) => {
