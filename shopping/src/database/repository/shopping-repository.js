@@ -38,7 +38,7 @@ class ShoppingRepository {
         let isExist = false;
         let cartItem = cart.items;
         if (cartItems.length > 0) {
-          cartItems.map(item => {
+          cartItems.map((item) => {
             if (item.product._id.toString() === product._id.toString()) {
               if (isRemove) {
                 cartItems.splice(cartItems.indexOf(item), 1);
@@ -78,7 +78,7 @@ class ShoppingRepository {
 
         if (cartItems.length > 0) {
           //process Order
-          cartItems.map(item => {
+          cartItems.map((item) => {
             amount += parseInt(item.product.price) * parseInt(item.unit);
           });
 
