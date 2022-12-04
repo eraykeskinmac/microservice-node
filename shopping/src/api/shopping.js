@@ -2,7 +2,7 @@ const ShoppingService = require('../services/shopping-service');
 const { PublishCustomerEvent } = require('../utils');
 const UserAuth = require('./middlewares/auth');
 
-module.exports = app => {
+module.exports = (app) => {
   const service = new ShoppingService();
 
   app.post('/order', UserAuth, async (req, res, next) => {
