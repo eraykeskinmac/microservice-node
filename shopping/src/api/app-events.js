@@ -1,7 +1,7 @@
-const CustomerService = require('../services/customer-service');
+const ShoppingService = require('../services/shopping-service');
 
 module.exports = app => {
-  const service = new CustomerService();
+  const service = new ShoppingService();
 
   app.use('/app-events', async (req, res, next) => {
     const { payload } = req.body;
