@@ -1,6 +1,6 @@
 const ShoppingService = require('../services/shopping-service');
 
-module.exports = app => {
+module.exports = (app) => {
   const service = new ShoppingService();
 
   app.use('/app-events', async (req, res, next) => {
