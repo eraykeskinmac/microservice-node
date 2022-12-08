@@ -1,0 +1,7 @@
+{"level":"error","message":"Fri Dec 09 2022 00:25:25 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:25:36 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:25:36 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:25:38 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:25:38 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:26:15 GMT+0300 (GMT+03:00)-{\"name\":\"Data Not found\",\"statusCode\":500,\"isOperational\":true}","private":true}
+{"level":"error","message":"Fri Dec 09 2022 00:31:19 GMT+0300 (GMT+03:00)-{\"expose\":true,\"statusCode\":400,\"status\":400,\"body\":\"{\\n    \\\"_id\\\": \\\"6387474a26b6d5e7e1ab2298\\\",\\n}\",\"type\":\"entity.parse.failed\"}","private":true}

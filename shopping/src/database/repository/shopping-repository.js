@@ -1,6 +1,6 @@
-const { CustomerModel, OrderModel } = require('../models');
+const { OrderModel } = require('../models');
 const { v4: uuidv4 } = require('uuid');
-const { APIError, BadRequestError } = require('../../utils/app-errors');
+const { APIError } = require('../../utils/app-errors');
 
 //Dealing with data base operations
 class ShoppingRepository {
@@ -50,9 +50,9 @@ class ShoppingRepository {
           });
         }
         if (!isExist && !isRemove) {
-          cartItems.push({ product: { ...items } });
+          cartItems.push({ product: { ...items }, unit: qty });
         }
-        cart.items = cartItem;
+        cart.items = cartItems;
         return await cart.save();
       } else {
         return await CartModel.create({
