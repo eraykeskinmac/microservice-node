@@ -53,16 +53,6 @@ module.exports.CreateChannel = async () => {
   }
 };
 
-// publish a message
-module.exports.PublishMessage = async (channel, binding_key, message) => {
-  try {
-    await channel.publish(EXCHANGE_NAME, binding_key, Buffer.from(message));
-    console.log('Message has been sent' + message);
-  } catch (err) {
-    throw err;
-  }
-};
-
 // subscribe to a message
 module.exports.SubscribeMessage = async (channel, service) => {
   const appQueue = await channel.assertQueue(QUEUE_NAME);
