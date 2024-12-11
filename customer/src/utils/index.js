@@ -16,10 +16,10 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
   return (await this.GeneratePassword(enteredPassword, salt)) === savedPassword;
 };
 
-(module.exports.GenerateSignature = async payload => {
+(module.exports.GenerateSignature = async (payload) => {
   return await jwt.sign(payload, APP_SECRET, { expiresIn: '1d' });
 }),
-  (module.exports.ValidateSignature = async req => {
+  (module.exports.ValidateSignature = async (req) => {
     const signature = req.get('Authorization');
 
     console.log(signature);
@@ -33,7 +33,7 @@ module.exports.ValidatePassword = async (enteredPassword, savedPassword, salt) =
     return false;
   });
 
-module.exports.FormateData = data => {
+module.exports.FormateData = (data) => {
   if (data) {
     return { data };
   } else {
@@ -57,7 +57,7 @@ module.exports.CreateChannel = async () => {
 module.exports.SubscribeMessage = async (channel, service) => {
   const appQueue = await channel.assertQueue(QUEUE_NAME);
   channel.bindQueue(appQueue.queue, EXCHANGE_NAME, CUSTOMER_BINDING_KEY);
-  channel.consume(appQueue.queue, data => {
+  channel.consume(appQueue.queue, (data) => {
     console.log('received data');
 
     console.log(data.content.toString());
