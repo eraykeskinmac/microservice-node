@@ -18,7 +18,7 @@ const StartServer = async () => {
     .listen(PORT, () => {
       console.log(`listening to port ${PORT}`);
     })
-    .on('error', err => {
+    .on('error', (err) => {
       console.log(err);
       process.exit();
     });
